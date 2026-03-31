@@ -1,22 +1,31 @@
 # Laravel High Load Demo
 
-A Laravel 10/11 demo project showcasing scalable backend patterns for high-traffic applications.
+A Laravel demo project showing scalable backend patterns for high-traffic systems.
 
 ## Features
 - REST API for savings plans
 - Queue-based processing for plan execution
-- Redis caching for price lookups
-- Optimized Eloquent queries
-- Background jobs for heavy operations
-- Clean service-based architecture
+- Cached price lookups
+- Service-layer architecture
+- Portfolio summary endpoint
+- Feature test included
 
 ## Tech Stack
 - PHP 8+
 - Laravel
 - MySQL
-- Redis
-- Queue Jobs
+- Database queues
+- Cache
 - REST API
 
-## Example Use Case
-A precious metals savings plan system where users can subscribe to monthly purchases and the backend processes plan execution asynchronously.
+## Endpoints
+- `POST /api/savings-plans`
+- `GET /api/savings-plans/{id}`
+- `POST /api/savings-plans/{id}/execute`
+- `GET /api/portfolio/{userId}`
+
+## Scalability Considerations
+- Background jobs for heavy processing
+- Cached price reads
+- Indexed database queries
+- Separated business logic into services
